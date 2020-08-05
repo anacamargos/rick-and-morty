@@ -14,6 +14,7 @@
 		BFD4090724DAD1CA00F226BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD4090524DAD1CA00F226BF /* LaunchScreen.storyboard */; };
 		BFD4091224DAD1CA00F226BF /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4091124DAD1CA00F226BF /* RickAndMortyTests.swift */; };
 		BFD4092024DAD2E500F226BF /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4091F24DAD2E500F226BF /* HTTPClient.swift */; };
+		BFD4092224DAD36800F226BF /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4092124DAD36800F226BF /* URLSessionHTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		BFD4091124DAD1CA00F226BF /* RickAndMortyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTests.swift; sourceTree = "<group>"; };
 		BFD4091324DAD1CA00F226BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD4091F24DAD2E500F226BF /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		BFD4092124DAD36800F226BF /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD4091F24DAD2E500F226BF /* HTTPClient.swift */,
+				BFD4092124DAD36800F226BF /* URLSessionHTTPClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD408FF24DAD1C400F226BF /* ViewController.swift in Sources */,
+				BFD4092224DAD36800F226BF /* URLSessionHTTPClient.swift in Sources */,
 				BFD408FB24DAD1C400F226BF /* AppDelegate.swift in Sources */,
 				BFD4092024DAD2E500F226BF /* HTTPClient.swift in Sources */,
 				BFD408FD24DAD1C400F226BF /* SceneDelegate.swift in Sources */,
