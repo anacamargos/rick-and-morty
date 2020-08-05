@@ -12,9 +12,11 @@
 		BFD408FF24DAD1C400F226BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD408FE24DAD1C400F226BF /* ViewController.swift */; };
 		BFD4090424DAD1CA00F226BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD4090324DAD1CA00F226BF /* Assets.xcassets */; };
 		BFD4090724DAD1CA00F226BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD4090524DAD1CA00F226BF /* LaunchScreen.storyboard */; };
-		BFD4091224DAD1CA00F226BF /* RickAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4091124DAD1CA00F226BF /* RickAndMortyTests.swift */; };
 		BFD4092024DAD2E500F226BF /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4091F24DAD2E500F226BF /* HTTPClient.swift */; };
 		BFD4092224DAD36800F226BF /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4092124DAD36800F226BF /* URLSessionHTTPClient.swift */; };
+		BFD4092724DAD52600F226BF /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4092624DAD52600F226BF /* URLSessionHTTPClientTests.swift */; };
+		BFD4092A24DAD6CF00F226BF /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4092924DAD6CF00F226BF /* XCTestCase+MemoryLeakTracking.swift */; };
+		BFD4092D24DAD6F800F226BF /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD4092C24DAD6F800F226BF /* URLProtocolStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +38,12 @@
 		BFD4090624DAD1CA00F226BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD4090824DAD1CA00F226BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD4090D24DAD1CA00F226BF /* RickAndMortyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickAndMortyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFD4091124DAD1CA00F226BF /* RickAndMortyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyTests.swift; sourceTree = "<group>"; };
 		BFD4091324DAD1CA00F226BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD4091F24DAD2E500F226BF /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		BFD4092124DAD36800F226BF /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		BFD4092624DAD52600F226BF /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
+		BFD4092924DAD6CF00F226BF /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		BFD4092C24DAD6F800F226BF /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +95,8 @@
 		BFD4091024DAD1CA00F226BF /* RickAndMortyTests */ = {
 			isa = PBXGroup;
 			children = (
-				BFD4091124DAD1CA00F226BF /* RickAndMortyTests.swift */,
+				BFD4092424DAD50900F226BF /* Tests */,
+				BFD4092324DAD50300F226BF /* Sources */,
 				BFD4091324DAD1CA00F226BF /* Info.plist */,
 			);
 			path = RickAndMortyTests;
@@ -124,6 +129,47 @@
 				BFD4092124DAD36800F226BF /* URLSessionHTTPClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		BFD4092324DAD50300F226BF /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				BFD4092B24DAD6EC00F226BF /* Stubs */,
+				BFD4092824DAD6B500F226BF /* Extensions */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		BFD4092424DAD50900F226BF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BFD4092524DAD50F00F226BF /* Network */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BFD4092524DAD50F00F226BF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BFD4092624DAD52600F226BF /* URLSessionHTTPClientTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BFD4092824DAD6B500F226BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFD4092924DAD6CF00F226BF /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFD4092B24DAD6EC00F226BF /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				BFD4092C24DAD6F800F226BF /* URLProtocolStub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +225,7 @@
 					};
 					BFD4090C24DAD1CA00F226BF = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 						TestTargetID = BFD408F624DAD1C400F226BF;
 					};
 				};
@@ -238,7 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFD4091224DAD1CA00F226BF /* RickAndMortyTests.swift in Sources */,
+				BFD4092724DAD52600F226BF /* URLSessionHTTPClientTests.swift in Sources */,
+				BFD4092D24DAD6F800F226BF /* URLProtocolStub.swift in Sources */,
+				BFD4092A24DAD6CF00F226BF /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +468,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZR4HDJL2Y8;
 				INFOPLIST_FILE = RickAndMortyTests/Info.plist;
@@ -430,6 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ana.RickAndMortyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndMorty.app/RickAndMorty";
@@ -441,6 +492,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZR4HDJL2Y8;
 				INFOPLIST_FILE = RickAndMortyTests/Info.plist;
